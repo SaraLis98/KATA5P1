@@ -11,7 +11,7 @@ public class createNewTable {
         // Cadena de conexión SQLite
         String url = "jdbc:sqlite:Kata5.db";
         // Instrucción SQL para crear nueva tabla
-        String sql = "CREATE TABLE IF NOT EXISTS direcc_email (\n"
+        String sql = "CREATE TABLE IF NOT EXISTS EMAIL(\n"
         + " id integer PRIMARY KEY AUTOINCREMENT,\n"
         + " direccion text NOT NULL);";
         try (Connection conn = DriverManager.getConnection(url);

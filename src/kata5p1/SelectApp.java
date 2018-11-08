@@ -31,7 +31,7 @@ public class SelectApp {
                 System.out.println(rs.getInt("id") + "\t" +
                 rs.getString("Mail"));
             }
-        } catch (SQLException e) {
+        } catch (SQLException e) { 
             System.out.println(e.getMessage());
         }
     }
