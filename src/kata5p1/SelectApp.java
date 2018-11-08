@@ -22,16 +22,14 @@ public class SelectApp {
     }
     // Se seleccionan todos los registros de la tabla PEOPLE
     public void selectAll(){
-        String sql = "SELECT * FROM PEOPLE";
+        String sql = "SELECT * FROM EMAIL";
         try (Connection conn = this.connect();
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sql)){
         // Bucle sobre el conjunto de registros.
             while (rs.next()) {
                 System.out.println(rs.getInt("id") + "\t" +
-                rs.getString("Name") + "\t" +
-                rs.getString("Apellidos") + "\t" +
-                rs.getString("Departamento") + "\t");
+                rs.getString("Mail"));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
